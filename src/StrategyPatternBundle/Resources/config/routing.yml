@@ -1,0 +1,3 @@
+strategy_pattern_homepage:
+    path:     /
+    defaults: { _controller: 'default_controller:indexAction' }

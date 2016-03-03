@@ -1,0 +1,19 @@
+services:
+
+  context:
+    class: StrategyPatternBundle\Context
+
+  long_strategy:
+    class: StrategyPatternBundle\Strategy\LongStrategy
+    tags:
+      - { name: strategy }
+
+  short_strategy:
+    class: StrategyPatternBundle\Strategy\ShortStrategy
+    tags:
+      - { name: strategy }
+
+  default_controller:
+    class: StrategyPatternBundle\Controller\DefaultController
+    arguments:
+      - '@context'
